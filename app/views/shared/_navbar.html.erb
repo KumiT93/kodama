@@ -1,6 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <h1 class='navbar-title'>Kodama</h1>
+    <%#= link_to 'Kodama', root_path, class: 'navbar-title' %>
     <%#= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
 
@@ -13,7 +14,7 @@
     <ul class="navbar-nav mr-auto">
       <%# if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "All Schools", "#", class: "nav-link" %>
+          <%= link_to "All Schools", schools_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Rankings", "#", class: "nav-link" %>
