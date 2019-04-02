@@ -1,12 +1,56 @@
 <!-- <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p> -->
-<div class="banner" style="background-image: linear-gradient(-250deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 50%), url('https://res.cloudinary.com/drsb1n3km/image/upload/v1554111231/lewagonparis.jpg');">
-  <div class="banner-content">
-    <h1 class="banner-title">プログラミングスクール</h1>
-    <p>Learn web development, Data Science or Design from the best course</p>
-    <%#= simple_form_for @tags do %>
-      <%#= f.input :name %>
-    <%# end %>
-    <a class="btn btn-lg start-now">Start now</a>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<div class="home-container">
+  <div class="banner" style="background-image: linear-gradient(-250deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 50%), url('https://res.cloudinary.com/drsb1n3km/image/upload/v1554111231/lewagonparis.jpg');">
+    <div class="banner-content  hidden-xs-down">
+      <h2 class="banner-title  hidden-xs-down">あなたに合ったプログラミングスクールを</h2>
+      <p>Learn web development, Data Science or Design from the best course</p>
+      <%#= simple_form_for @tags do %>
+        <%#= f.input :name %>
+      <%# end %>
+      <a class="btn btn-lg start-now">Start now</a>
+    </div>
+  </div>
+
+  <div class="home-cards">
+    <h3>Best Schools by Categories</h3>
+
+    <div class="categories-container">
+      <div class="row">
+        <div class="col-xs-12 col-md-3">
+          <div class='text-center'><%=  'UI/UX Design' %></div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class='text-center'><%=  'Fullstuck Bootcamp' %></div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class='text-center'><%=  'Data Science' %></div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class='text-center'><%=  'Block chain' %></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="school-container">
+      <div class="row">
+
+      <% @schools.each do |school| %>
+        <div class="col-xs-12 col-md-3">
+          <div class="school-index">
+            <div class="school-card">
+
+              <p><%= school.name.capitalize! %></p>
+              <p><%= school.about %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      </div>
+    </div>
+
   </div>
 </div>
