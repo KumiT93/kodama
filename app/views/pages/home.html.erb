@@ -41,9 +41,10 @@
         <div class="col-xs-12 col-md-3">
           <div class="school-index">
             <div class="school-card">
-
-              <p><%= school.name.capitalize! %></p>
-              <p><%= school.about %></p>
+              <%= link_to school_path(school) do %>
+              <p><%= image_tag(school.logo, class: 'school-logo') %></p>
+              <p class='h-school-name'><%= school.name.capitalize! %></p>
+              <% end %>
             </div>
           </div>
         </div>
