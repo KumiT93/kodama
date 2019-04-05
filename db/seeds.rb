@@ -4,6 +4,7 @@ Graduates of Le Wagon will be proficient in Ruby on Rails, JavaScript, HTML & CS
           )
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554448520/logo.png'
 puts 'photo uploaded!'
+school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554451460/ai-artificial-intelligence-codes-247791.jpg'
 school.save!
 
 puts "Added Just the two of us, Grover Washington song."
