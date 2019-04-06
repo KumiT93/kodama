@@ -24,17 +24,19 @@
   </div>
 </div>
 
-<div id="review">
-  <h3>Review</h3>
+<div class="detail-container">
+  <div id="review">
+    <h3>Review</h3>
+  </div>
+
+  <div id="course">
+    <h3>Course</h3>
+  </div>
+
+  <div id="about">
+    <h3>About</h3>
+    <%= @school.about %>
+  </div>
 </div>
 
-<div id="course">
-  <h3>Course</h3>
-</div>
-
-<div id="about">
-  <h3>About</h3>
-  <%= @school.about %>
-</div>
-
-<%= @school.tag_list %>
+<%#= @school.tag_list %>
