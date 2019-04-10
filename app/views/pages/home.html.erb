@@ -1,18 +1,15 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <div class="home-container">
   <div class="banner" style="background-image: linear-gradient(-250deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 50%), url('https://res.cloudinary.com/drsb1n3km/image/upload/v1554111231/lewagonparis.jpg');">
     <div class="banner-content  hidden-xs-down">
       <h2 class="banner-title  hidden-xs-down">あなたに合ったプログラミングスクールを</h2>
-      <p>Learn web development, Data Science or Design from the best course</p>
+      <p>ウェブディベロップメント、データサイエンスやデザインを学ぶ</p>
 
       <%= form_tag schools_path, method: :get, class: 'search-form' do %>
-        <%= text_field_tag :query, params[:query], class: "form-home mr-sm-6 search-field", placeholder: " Search by programming" %>
-        <%#= button_tag(type: "submit", class: "btn search-btn")  %>
-        <input type="submit" value="Submit" class='btn btn-primary'>
-           <!-- <i class="fas fa-search awesome-search-color fa-lg"></i> -->
-        <%# end %>
+        <%= text_field_tag :query, params[:query], class: "form-home mr-sm-6 search-field", placeholder: " Search" %>
+        <input type="submit" value="探す" class='btn btn-primary home-submit'>
       <% end %>
 
-      <!-- <a class="btn btn-lg start-now">Start now</a> -->
     </div>
   </div>
 
@@ -45,8 +42,14 @@
           <div class="school-index">
             <div class="school-card">
               <%= link_to school_path(school) do %>
-              <p><%= image_tag(school.logo, class: 'school-logo') %></p>
-              <p class='h-school-name'><%= school.name.capitalize! %></p>
+              <div class="school-logo-card">
+                <%= image_tag(school.logo, class: 'school-logo') %>
+              </div>
+              <div class="school-description">
+                <p class='h-school-name'><%= school.name.capitalize! %></p>
+                <p class='h-school-detail'>location</p>
+                <p class='h-school-detail'>stars</p>
+              </div>
               <% end %>
             </div>
           </div>
