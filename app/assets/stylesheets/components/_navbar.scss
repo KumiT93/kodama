@@ -13,9 +13,14 @@
 
 .nav-item {
   padding: 0 30px 0 30px;
+  color: #6FCCD3;
 }
 .nav-link {
   color: #6FCCD3;
+  padding: 0 30px;
+}
+.nav-link:hover {
+  color: #3bb4c1;
 }
 .navbar-title {
   color: #6FCCD3;
