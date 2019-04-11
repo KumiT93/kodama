@@ -1,7 +1,7 @@
 .show-banner {
   height: 30vh;
   width: auto;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.45);
   background-size: cover !important;
   background-position: center;
   color: white;
@@ -12,7 +12,8 @@
   left: 50px;
   top: 40px;
   width: 100px;
-  border-radius: 50%;
+  height: auto;
+  // border-radius: 50%;
 }
 .show-card-category {
   position: absolute;
@@ -21,13 +22,15 @@
   font-size: 15px;
   text-transform: uppercase;
 }
+.show-school-name {
+  color: #3bb4c1;
+  font-weight: bold;
+  font-size: 40px;
+}
 .show-card-description {
   position: absolute;
   bottom: 120px;
   left: 180px;
-}
-.show-card-description h2 {
-  font-size: 24px;
 }
 .show-card-description p {
   font-size: 14px;
