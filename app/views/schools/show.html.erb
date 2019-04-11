@@ -2,7 +2,7 @@
 <div class="show-banner" style="background-image: linear-gradient(-250deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 50%), url('<%= cl_image_path @school.banner %>');">
   <%= image_tag(@school.logo, class: 'show-card-logo') %>
   <div class="show-card-description">
-    <h2>Le Wagon</h2>
+    <h2 class='show-school-name'><%= @school.name %></h2>
   </div>
   <div class="show-card-category">stars</div>
   <div class="s-school-description">
@@ -12,29 +12,29 @@
 
 <div class="show-container">
   <div class="show-c-content review">
-    <h2>Reviews</h2>
+    <h2>レビュー</h2>
   </div>
 
   <div class="show-c-content courses">
-    <h2>Courses</h2>
+    <h2>コース</h2>
   </div>
 
   <div class="show-c-content about">
-    <h2>About</h2>
+    <h2>概要</h2>
   </div>
 </div>
 
 <div class="detail-container">
   <div id="review">
-    <h3>Review</h3>
+    <!-- <h3>レビュー</h3> -->
   </div>
 
   <div id="course">
-    <h3>Course</h3>
+    <!-- <h3>コース</h3> -->
   </div>
 
   <div id="about">
-    <h3>About</h3>
+    <!-- <h3>概要</h3> -->
     <%= @school.about %>
   </div>
 </div>
