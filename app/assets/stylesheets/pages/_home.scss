@@ -54,13 +54,15 @@
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  padding-bottom: 10px;
 }
 .school-card {
   height: 250px;
+  background-color: white;
 }
 .school-logo {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: 150px;
 }
 .school-logo-card {
