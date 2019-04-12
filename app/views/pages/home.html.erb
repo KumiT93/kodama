@@ -37,7 +37,7 @@
     <div class="school-container">
       <div class="row">
 
-      <% @schools.each do |school| %>
+      <% @schools.each_with_index do |school, i| %>
         <div class="col-xs-12 col-md-3">
           <div class="school-index">
             <div class="school-card">
@@ -54,6 +54,7 @@
             </div>
           </div>
         </div>
+        <% break if i == 3 %>
       <% end %>
 
       </div>
