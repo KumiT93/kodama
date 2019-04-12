@@ -68,6 +68,34 @@ school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943644/%E3
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943644/%E3%82%A6%E3%82%A7%E3%83%95%E3%82%99%E5%A1%BE-banner.jpg'
 school.save!
 
+school = School.new(name: 'リナックスアカデミー',
+          about: 'リナックスアカデミーは、初心者でも最短4週間でエンジニアになれるスクールとして人気です。')
+school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029094/%E3%83%AA%E3%83%8A%E3%83%83%E3%82%AF%E3%82%B9%E3%82%A2%E3%82%AB%E3%83%86%E3%82%99%E3%83%9F%E3%83%BC-logo.jpg'
+school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029094/%E3%83%AA%E3%83%8A%E3%83%83%E3%82%AF%E3%82%B9%E3%82%A2%E3%82%AB%E3%83%86%E3%82%99%E3%83%9F%E3%83%BC-banner.jpg'
+school.save!
 
+school = School.new(name: 'ITブートキャンプ',
+          about: 'ITブートキャンプは環境を一変させ、短期間で集中してプログラミングを学ぶことで、知識ゼロからITエンジニアレベルまで技術を引き上げることができるプログラミングスクールです。')
+school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029094/it%E3%83%95%E3%82%99%E3%83%BC%E3%83%88%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%95%E3%82%9A-logo.jpg'
+school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029094/IT-Bootcamp-banner.jpg'
+school.save!
+
+school = School.new(name: 'TECH::CAMP',
+          about: 'TECH::CAMP（テックキャンプ）は、平均1ヵ月でサービス開発のできるエンジニアを養成する、短期集中型のプログラミングスクールです。')
+school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029093/techcamp-logo.png'
+school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029093/techcamp-banner.jpg'
+school.save!
+
+school = School.new(name: 'Asialスクール',
+          about: 'Asialスクールは、最短1日で実践的なWeb技術を学ぶことができるスクールです。')
+school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029093/asial-banner.png'
+school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029094/asial-school-banner.png'
+school.save!
+
+school = School.new(name: 'INTERNET ACADEMY',
+          about: '日本初で日本唯一のWeb専門スクールとして1995年に始まったインターネット・アカデミーは「初心者を最短距離で最前線へ導くこと」を目指しています。')
+school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029093/internetacademy-logo.png'
+school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029456/internetacademy1.png'
+school.save!
 
 puts "seeding done."
