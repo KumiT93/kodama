@@ -4,8 +4,11 @@ Rails.application.routes.draw do
 
   get '/tagged', to: "schools#tagged", as: :tagged
 
+  # resources :schools, only: [:index, :show]
+  # resources :schools, only: [:index, :show]
   resources :schools, only: [:index, :show]
+  resources :reviews, only: [:new, :create]
 
-  post '/reviews', to: 'reviews#create'
+  # post '/reviews', to: 'reviews#create'
 
 end
