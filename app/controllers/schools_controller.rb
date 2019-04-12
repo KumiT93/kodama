@@ -3,14 +3,12 @@ class SchoolsController < ApplicationController
   # skip_after_action :verify_authorized, only: :show
 
   def index
-    # @schools = School.all
     if params[:query].present?
-      @schools = School.tagged_with(params[:tag])
+      sql_query = "name ILIKE :query OR syllabus ILIKE :query"
+      @schools = School.where(sql_query, query: "%#{params[:query]}%")
     else
       @schools = School.all
     end
-    # @related_schools = @school.find_related_tags
-    # @school = School.find(params[:id])
   end
 
   def show

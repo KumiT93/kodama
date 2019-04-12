@@ -5,8 +5,13 @@
       <h2 class="banner-title  hidden-xs-down">あなたに合ったプログラミングスクールを</h2>
       <p>ウェブディベロップメント、データサイエンスやデザインを学ぶ</p>
 
+      <%#= form_tag schools_path, method: :get, class: 'search-form' do %>
+        <%#= text_field_tag :query, params[:query], class: "form-home mr-sm-6 search-field", placeholder: " Search" %>
+        <!-- <input type="submit" value="探す" class='btn btn-primary home-submit'> -->
+      <%# end %>
       <%= form_tag schools_path, method: :get, class: 'search-form' do %>
-        <%= text_field_tag :query, params[:query], class: "form-home mr-sm-6 search-field", placeholder: " Search" %>
+        <%= text_field_tag :query, params[:query], class: "form-home mr-sm-6 search-field", placeholder: "Search"
+        %>
         <input type="submit" value="探す" class='btn btn-primary home-submit'>
       <% end %>
 
@@ -14,21 +19,21 @@
   </div>
 
   <div class="home-cards">
-    <h3>Best Schools by Categories</h3>
+    <h3>カテゴリ別スクール</h3>
 
     <div class="categories-container">
       <div class="row">
         <div class="col-xs-12 col-md-3">
-          <div class='text-center'><%=  'UI/UX Design' %></div>
+          <div class='text-center'><%=  'UI/UX デザイン' %></div>
         </div>
         <div class="col-xs-12 col-md-3">
-          <div class='text-center'><%=  'Fullstuck Bootcamp' %></div>
+          <div class='text-center'><%=  'フルスタック型ブートキャンプ' %></div>
         </div>
         <div class="col-xs-12 col-md-3">
-          <div class='text-center'><%=  'Data Science' %></div>
+          <div class='text-center'><%=  'データサイエンス' %></div>
         </div>
         <div class="col-xs-12 col-md-3">
-          <div class='text-center'><%=  'Block chain' %></div>
+          <div class='text-center'><%=  'ブロックチェーン' %></div>
         </div>
       </div>
     </div>
