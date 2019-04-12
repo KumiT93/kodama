@@ -21,7 +21,9 @@
             <%= link_to school_path(school) do %>
             <p><%= image_tag(school.logo, class: 'school-logo') %></p>
             <div class="school-description">
-              <p class='school-name'><%= school.name.capitalize! %></p>
+              <p class='school-name'><%= school.name %></p>
+              <p class='school-detail'>location</p>
+              <p class='school-detail'>stars</p>
             </div>
             <% end %>
           </div>
