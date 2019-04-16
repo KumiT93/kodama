@@ -9,6 +9,8 @@ gem 'puma'
 gem 'rails', '5.2.2.1'
 gem 'redis'
 gem 'pg_search'
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
