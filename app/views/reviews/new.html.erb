@@ -16,14 +16,16 @@
     <div class="review-detail">
       <%= simple_form_for @review do |f| %>
         <%= f.input :レビュー, as: :text, input_html: { value: 'レビューを書く', style: 'color: #bbbbbb' } %>
-      <% end %>
+      <%# end %>
     </div>
 
     <div class="authenticate">
-      <%= simple_form_for @review do |f| %>
+      <%#= simple_form_for @review do |f| %>
         <%= f.input :authenticate, as: :string, input_html: { value: 'Mail or Github', style: 'color: #bbbbbb'} %>
-      <% end %>
+      <%# end %>
     </div>
 
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
+    <% end %>
   </div>
 </div>
