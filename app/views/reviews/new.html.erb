@@ -1,5 +1,20 @@
 <div class="form-container">
+  <div class="review-detail">レビューを書く</div>
+　　
+  <div class="choose-school">
+    <h3>スクール詳細</h3>
+    <%= form_for @review do |f| %>
+     <%= f.collection_select :school, School.all,:id,:name, include_blank: true %>
+    <% end %>
+  </div>
 
+  <div class="rating">
+    <h3>Rating</h3>
+  </div>
 
-FORM HERE
+  <div class="review-detail">
+    <%= simple_form_for @review do |f| %>
+      <%= f.input :レビュー, as: :text, input_html: { value: 'レビューを書く' } %>
+    <% end %>
+  </div>
 </div>
