@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show, :new]
+
   def show
     @review = Review.all
   end
