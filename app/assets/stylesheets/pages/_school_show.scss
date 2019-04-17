@@ -8,20 +8,10 @@
   position: relative;
 }
 .show-card-logo {
-  position: absolute;
-  left: 50px;
-  top: 40px;
   width: 100px;
-  height: auto;
-  // border-radius: 50%;
+  height: 100px;
 }
-.show-card-category {
-  position: absolute;
-  top: 110px;
-  left: 180px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
+
 .show-school-name {
   color: #3bb4c1;
   font-weight: bold;
@@ -29,8 +19,12 @@
 }
 .show-card-description {
   position: absolute;
-  bottom: 120px;
-  left: 180px;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+.s-school-card-description {
+  margin-left: 20px;
 }
 .show-card-description p {
   font-size: 14px;
