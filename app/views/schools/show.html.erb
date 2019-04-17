@@ -3,10 +3,11 @@
   <%= image_tag(@school.logo, class: 'show-card-logo') %>
   <div class="show-card-description">
     <h2 class='show-school-name'><%= @school.name %></h2>
-  </div>
-  <div class="show-card-category">stars</div>
-  <div class="s-school-description">
-    <%#= @school.price %>
+    <div class="show-card-category">stars</div>
+      <div class="s-school-description">
+        <%= @school.courses[0].name %>
+        <%= @school.courses[0].price %>
+      </div>
   </div>
 </div>
 
