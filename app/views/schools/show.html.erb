@@ -31,7 +31,10 @@
     </div>
 
     <div id="course" style='display: none;'>
-      <%#= @school.courses[0].description %>
+      <% @school.courses.each do |course| %>
+        <p>コース名：<%= course.name %></p>
+        <p>価格：<%= course.price %></p>
+      <% end %>
     </div>
 
     <div id="about" style='display: none;' >
