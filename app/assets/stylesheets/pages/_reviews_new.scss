@@ -26,8 +26,16 @@
 .authenticate {
   font-size: 30px;
   color: #6FCCD3;
+  display: flex;
 }
-
+.form-submit {
+  background-color: #6FCCD3;
+  border: none;
+  height: 40px;
+  &:hover {
+    background-color: #3bb4c1;
+  }
+}
 
 #review_school {
   width: 60vw;
