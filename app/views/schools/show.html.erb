@@ -1,12 +1,15 @@
 <%# @school.each do |s| %>
 <div class="show-banner" style="background-image: linear-gradient(-250deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1) 50%), url('<%= cl_image_path @school.banner %>');">
-  <%= image_tag(@school.logo, class: 'show-card-logo') %>
   <div class="show-card-description">
-    <h2 class='show-school-name'><%= @school.name %></h2>
-  </div>
-  <div class="show-card-category">stars</div>
-  <div class="s-school-description">
-    <%#= @school.price %>
+    <%= image_tag(@school.logo, class: 'show-card-logo') %>
+    <div class="s-school-card-description">
+      <h2 class='show-school-name'><%= @school.name %></h2>
+      <div class="show-card-category">stars</div>
+        <div class="s-school-description">
+          <div>プログラム：<%= @school.courses[0].name %></div>
+          <div>価格：<%= @school.courses[0].price %>円</div>
+        </div>
+      </div>
   </div>
 </div>
 
@@ -28,6 +31,7 @@
     </div>
 
     <div id="course" style='display: none;'>
+      <%#= @school.courses[0].description %>
     </div>
 
     <div id="about" style='display: none;' >

@@ -98,4 +98,14 @@ school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029093/int
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029456/internetacademy1.png'
 school.save!
 
-puts "seeding done."
+puts "seeding schools done."
+
+course = Course.new(name: 'The Fullstuck Program', price: '790000', weeks: '9', school_id: 1)
+course.save!
+
+puts 'course seeds done.'
+
+
+
+
+
