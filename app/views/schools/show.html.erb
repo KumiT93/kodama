@@ -14,23 +14,26 @@
 
   <input type="checkbox" style="display: none;" id="s-show-review">
   <label for="s-show-review" class='btn write-btn show-c-content review'>レビュー</label>
+
   <input type="checkbox" style="display: none;" id="s-show-course">
-  <label for="s-show-review" class='btn write-btn show-c-content courses'>コース</label>
+  <label for="s-show-course" class='btn write-btn show-c-content courses'>コース</label>
+
   <input type="checkbox" style="display: none;" id="s-show-about">
-  <label for="s-show-review" class='btn write-btn show-c-content about'>概要</label>
+  <label for="s-show-about" class='btn write-btn show-c-content about'>概要</label>
 
 </div>
 
-<div class="detail-container"  style='display: none;'>
-  <div id="review">
-  </div>
+  <div class="detail-container" >
+    <div id="review"  style='display: none;'>
+    </div>
 
-  <div id="course" style='display: none;'>
-  </div>
+    <div id="course" style='display: none;'>
+    </div>
 
-  <div id="about" style='display: none;'>
-    <%= @school.about %>
+    <div id="about" style='display: none;' >
+      <%= @school.about %>
+    </div>
   </div>
-</div>
 
 <%#= @school.tag_list %>
+

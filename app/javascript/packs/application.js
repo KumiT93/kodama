@@ -1,2 +1,2 @@
 import "bootstrap";
-import 'school-show';
+// import 'school-show';
