@@ -5,10 +5,6 @@
       <h2 class="banner-title  hidden-xs-down">あなたに合ったプログラミングスクールを</h2>
       <p>ウェブディベロップメント、データサイエンスやデザインを学ぶ</p>
 
-      <%#= form_tag schools_path, method: :get, class: 'search-form' do %>
-        <%#= text_field_tag :query, params[:query], class: "form-home mr-sm-6 search-field", placeholder: " Search" %>
-        <!-- <input type="submit" value="探す" class='btn btn-primary home-submit'> -->
-      <%# end %>
       <%= form_tag schools_path, method: :get, class: 'search-form' do %>
         <%= text_field_tag :query, params[:query], class: "form-home mr-sm-6 search-field", placeholder: "Search"
         %>
