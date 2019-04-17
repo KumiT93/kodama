@@ -103,6 +103,9 @@ puts "seeding schools done."
 course = Course.new(name: 'The Fullstuck Program', price: '790000', weeks: '9', school_id: 1)
 course.save!
 
+course = Course.new(name: '副業・フリーランスコース 短期集中スタイル', price: '598000', weeks: '10~', school_id: 2)
+course.save!
+
 puts 'course seeds done.'
 
 
