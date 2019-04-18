@@ -10,6 +10,9 @@
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
   margin: 30px 20px;
   // min-width: 220px;
+  &:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  }
 }
 .search-field {
   width: 300px;
@@ -18,7 +21,6 @@
 }
 .school-logo {
   width: 100%;
-  // background-size: cover;
 }
 .school-name {
   color: black;
@@ -27,4 +29,10 @@
   }
   display: flex;
   justify-content: center;
+}
+.school-description {
+  color: #444444;
+}
+.school-description a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
 }
