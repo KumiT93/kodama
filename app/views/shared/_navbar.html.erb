@@ -5,7 +5,7 @@
 
   <div class="navbar-wagon-right visible-lg-block hidden-sm-down hidden-xs-down collapse navbar-collapse hidden-xs hidden-sm">
     <%= link_to "スクール比較", schools_path, class: "nav-link" %>
-    <%= link_to "ランキング", "#", class: "nav-link" %>
+    <%= link_to "ランキング", ranking_path, class: "nav-link" %>
     <%= link_to "レビューを書く", new_review_path, class: "nav-link" %>
   </div>
 
@@ -14,7 +14,7 @@
       <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
       <li class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <ul><%= link_to "スクール比較", schools_path, class: 'nav-path' %></ul>
-        <ul><%= link_to "ランキング", "#", class: 'nav-path'  %></ul>
+        <ul><%= link_to "ランキング", ranking_path, class: 'nav-path'  %></ul>
         <ul><%= link_to "レビューを書く", new_review_path, class: 'nav-path'  %></ul>
       </li>
     </div>

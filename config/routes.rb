@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/tagged', to: "schools#tagged", as: :tagged
+  get '/ranking', to: 'schools#ranking', as: :ranking
 
   # resources :schools, only: [:index, :show]
   # resources :schools, only: [:index, :show]
