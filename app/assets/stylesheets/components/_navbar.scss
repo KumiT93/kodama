@@ -19,10 +19,10 @@
   color: #6FCCD3;
 }
 .nav-link {
-  color: #6FCCD3 !important;
+  color: #6FCCD3;
   padding: 0 30px;
-  font-weight: bold !important;
-  font-size: 20px !important;
+  font-weight: bold ;
+  font-size: 20px ;
 }
 .nav-link:hover {
   color: #3bb4c1;
@@ -48,8 +48,8 @@
   border-color: #E6E6E6;
 }
 .nav-path a:hover, a:visited, a:link, a:active {
-  background: transparent !important;
-  color: black;
+  // background: transparent !important;
+  // color: black;
 }
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
