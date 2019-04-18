@@ -7,7 +7,11 @@
       <div class="show-card-category">stars</div>
         <div class="s-school-description">
           <div>プログラム：<%= @school.courses[0].name %></div>
-          <div>価格：<%= @school.courses[0].price %>円</div>
+          <div>価格：<% prices = @school.courses.map do |c| %>
+            <% c.price %>
+            <% end %>
+            <%= prices.join(',') %>円
+          </div>
         </div>
       </div>
   </div>
