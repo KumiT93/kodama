@@ -31,7 +31,15 @@
 </div>
 
   <div class="detail-container" >
-    <div id="review"  style='display: none;'>
+    <div id="review" >
+      <% if @reviews.exists? %>
+        <% @reviews.each do |review| %>
+          <%= review.title %>
+          <%= review.detail %>
+        <% end %>
+      <% else %>
+        <%= 'まだレビューはありません。' %>
+      <% end %>
     </div>
 
     <div id="course" style='display: none;'>
