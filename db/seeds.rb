@@ -64,7 +64,7 @@ school.save!
 
 school = School.new(name: 'WEB塾',
           about: 'WEB塾はWEB制作会社の運営を通して得た、現状のWebスクールにはない現場の技術を伝えるために開設された学校です。')
-school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943644/%E3%82%A6%E3%82%A7%E3%83%95%E3%82%99%E5%A1%BE-logo.png'
+school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555547989/web%E5%A1%BElogo.jpg'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943644/%E3%82%A6%E3%82%A7%E3%83%95%E3%82%99%E5%A1%BE-banner.jpg'
 school.save!
 
