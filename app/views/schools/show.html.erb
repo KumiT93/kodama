@@ -40,6 +40,7 @@
       <% else %>
         <%= 'まだレビューはありません。' %>
       <% end %>
+      <p><%= link_to '最初のレビューを書く', new_review_path, class: 'btn btn-primary s-write-review' %></p>
     </div>
 
     <div id="course" style='display: none;'>
