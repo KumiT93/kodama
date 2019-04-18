@@ -33,7 +33,7 @@
   </div>
 
   <div class="detail-container" >
-    <div id="review" >
+    <div id="review" style='display: none;'>
       <% if @reviews.exists? %>
         <% @reviews.each do |review| %>
           <%= review.title %>
@@ -52,7 +52,7 @@
       <% end %>
     </div>
 
-    <div id="about" style='display: none;' >
+    <div id="about"  >
       <%= @school.about %>
     </div>
   </div>

@@ -1,5 +1,5 @@
 class SchoolsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show, :new]
+  skip_before_action :authenticate_user!, only: [:index, :show, :new, :ranking]
   # skip_after_action :verify_authorized, only: :show
 
   def index
@@ -23,6 +23,10 @@ class SchoolsController < ApplicationController
     else
       @restaurants = Restaurant.all
     end
+  end
+
+  def ranking
+    @schools = School.all
   end
 
   def school_params
