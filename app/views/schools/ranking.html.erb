@@ -1,1 +1,35 @@
-hola
+<div class="school-container">
+
+  <div class="school-search">
+    <h2>School Ranking</h2>
+    <div class="flex-grow-3 d-flex musician-search-bar" >
+      <%#= form_tag schools_path, method: :get, class: 'search-form' do %>
+        <%#= text_field_tag :query, params[:query], class: "form-home mr-sm-6 search-field", placeholder: "Price, Duration, Rating" %>
+        <%#= button_tag(type: "submit", class: "btn search-btn") do %>
+           <!-- <i class="fas fa-search awesome-search-color fa-lg"></i> -->
+        <%# end %>
+      <%# end %>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <% @schools.first(10).each do |school| %>
+      <div class="col-xs-12 col-md-3">
+        <div class="school-index">
+          <div class="school-card">
+            <%= link_to school_path(school) do %>
+            <p><%= image_tag(school.logo, class: 'school-logo') %></p>
+            <div class="school-description">
+              <p class='school-name'><%= school.name %></p>
+              <p class='school-detail'>location</p>
+              <p class='school-detail'>stars</p>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
