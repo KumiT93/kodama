@@ -1,5 +1,6 @@
 school = School.new(name: 'Le Wagon',
-          about: 'Le Wagonは、９週間でRuby on Railsを中心としたプログラミングを学ぶスクールです。本部はパリにあり、他にも全世界にクラスを展開しているグローバルなプログラミングスクールです。世界基準でプログラミングを学べ、また授業が英語で行われるので、今後英語を使用したディベロッパーや将来を検討している方にはぴったりです。')
+          about: 'Le Wagonは、９週間でRuby on Railsを中心としたプログラミングを学ぶスクールです。本部はパリにあり、他にも全世界にクラスを展開しているグローバルなプログラミングスクールです。世界基準でプログラミングを学べ、また授業が英語で行われるので、今後英語を使用したディベロッパーや将来を検討している方にはぴったりです。
+          コースは今現在１種類ですが、Rubyの基礎からオブジェクト指向、HTML、CSS、JavaScriptなどのフロントエンド言語を学び、最後にRuby on Railsで全てをつなげるというコースですので、ディベロッパーになるのに必要な基本的な知識を学ぶことができます。')
 
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554448520/logo.png'
 puts 'photo uploaded!'
@@ -16,7 +17,11 @@ school.url = 'https://tech-camp.in/expert/lp/job_change'
 school.save!
 
 school = School.new(name: 'TechAcademy',
-          about: 'TechAcademyは、オンライン型のプログラミングスクールです。')
+          about: 'プログラミングやアプリ開発を学べるオンラインスクール。
+          1人では続かない方のための短期集中プログラム「オンラインブートキャンプ」を開催。
+現役のプロのサポートと独自の学習システムで短期間で成長できます。現役のプロがあなたの制作・開発を徹底サポート
+1人では難しいこともメンターがそばにいれば、くじけずに進めますね。
+第一線で活躍する現役プロが実務経験を元にマンツーマンでサポートしてくれます。また、初心者用コースからAIコースまで、幅広くコースが用意されており、したいことによってコースを選べるのもいいですね。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943643/techacademy_logo.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943643/techadacemy-banner.jpg'
 school.url = 'https://techacademy.jp/'
