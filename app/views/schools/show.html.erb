@@ -5,22 +5,7 @@
     <div class="s-school-card-description">
       <h2 class='show-school-name'><%= @school.name %></h2>
       <div class="show-card-category">
-        <% @school.reviews.each do |review| %>
-          <% if review != []  %>
-            <% overall_stars = review.overall_rating.map { |mr| mr.overall_stars } %>
-            <% num = overall_stars.inject{ |sum, el| sum + el }.to_f %>
-            <% ave_stars = (num / overall_stars.size).round if num > 0 %>
-          <% else %>
-            <%= 'no reviews yet' %>
-          <% end %>
-          <% 5.times.each do |count| %>
-            <% if ave_stars && ave_stars > count %>
-              <i class="fas fa-star star"></i>
-            <% else %>
-              <i class="fas fa-star unstar"></i>
-            <% end %>
-          <% end %>
-        <% end %>
+
       </div>
       <div class="s-school-description">
         <div>プログラム：<%= @school.courses[0].name %><%= @school.courses.size >= 2 ? ' 他' : nil  %></div>
@@ -49,8 +34,10 @@
     <div id="review" style='display: none;'>
       <% if @reviews.exists? %>
         <% @reviews.each do |review| %>
-          <%= review.title %>
-          <%= review.detail %>
+        <div class='review-title-detail'>
+          <div><%= review.title %></div>
+          <div><%= review.detail %></div>
+        </div>
         <% end %>
       <% else %>
         <%= 'まだレビューはありません。' %>
