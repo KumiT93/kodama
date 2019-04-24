@@ -15,7 +15,8 @@ class SchoolsController < ApplicationController
     @schools = School.all
     @school = School.find(params[:id])
     @related_schools = @school.find_related_tags
-    @reviews = Review.all
+    # @reviews = Resview.all
+    @reviews = Review.where(params[:school_id])
   end
 
   def tagged
