@@ -48,8 +48,9 @@
     <div id="course" style='display: none;'>
       <% @school.courses.each do |course| %>
         <p>コース名：<%= course.name %></p>
-        <p>価格：<%= number_with_delimiter(course.price, :precision => 2, :delimiter => ',') %></p>
+        <p>価格：<%= number_with_delimiter(course.price, :precision => 2, :delimiter => ',') %>円</p>
       <% end %>
+      <%= link_to 'もっと詳しく見る', @school.url, target: :_blank  %>
     </div>
 
     <div id="about"  >

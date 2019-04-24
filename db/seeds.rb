@@ -4,6 +4,7 @@ school = School.new(name: 'Le Wagon',
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554448520/logo.png'
 puts 'photo uploaded!'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554451460/ai-artificial-intelligence-codes-247791.jpg'
+school.url = 'https://www.lewagon.com/'
 school.save!
 
 
@@ -11,48 +12,56 @@ school = School.new(name: 'TECH::EXPERT',
           about: '600時間の学習時間によってプロのスキルを身につけ、キャリアアップを支えるプログラミングスクールです。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943643/techexpert.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943645/techexpert-banner.png'
+school.url = 'https://tech-camp.in/expert/lp/job_change'
 school.save!
 
 school = School.new(name: 'TechAcademy',
           about: 'TechAcademyは、オンライン型のプログラミングスクールです。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943643/techacademy_logo.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943643/techadacemy-banner.jpg'
+school.url = 'https://techacademy.jp/'
 school.save!
 
 school = School.new(name: 'WebCamp',
           about: 'WebCampは、Webアプリ、デザインの指導を行なっているプログラミングスクールです。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/codecamp-logo.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943643/CodeCamp-banner.png'
+school.url = 'https://web-camp.io/pro/?utm_source=google&utm_medium=cpc&utm_campaign=google_pro&utm_term=%2Bwebcamp_b&gclid=Cj0KCQjwkoDmBRCcARIsAG3xzl_sCreAEICKYlKjt4I-hkLZz883UVNiVOXmwoaAa_neibdWp04hckwaAgT1EALw_wcB'
 school.save!
 
 school = School.new(name: '０円スクール',
           about: '0円スクールは、入学金、受講料、教材費など一切かからずにプログラミングを学ぶことができる画期的なスクールです。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/%EF%BC%90%E5%86%86%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB-logo.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/%EF%BC%90%E5%86%86%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB-banner.jpg'
+school.url = 'https://zero-school.com/'
 school.save!
 
 school = School.new(name: 'CodeCamp-banner',
           about: 'CodeCampは、オンラインのプログラミング学習サービスです。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/codecamp-logo.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943643/CodeCamp-banner.png'
+school.url = 'https://codecamp.jp/'
 school.save!
 
 school = School.new(name: 'POTEPAN CAMP',
           about: 'POTEPAN CAMP（ポテパンキャンプ）は、「エンジニア専門転職支援のポテパン」と「急成長スタートアップCTO」のタッグで贈る、仕事獲得に特化したエンジニアスクールです。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943643/potepan-logo.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943644/%E3%81%BB%E3%82%9A%E3%81%A6%E3%83%8F%E3%82%9A%E3%83%B3-banner.jpg'
+school.url = 'https://camp.potepan.com/'
 school.save!
 
 school = School.new(name: 'KENスクール',
           about: 'KENスクールは開校28年を迎え、未経験者をプロに育てる最適な学習形式を追及している学校です。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/kenschool-logo.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943643/kenschool-banner.jpg'
+school.url = 'https://www.kenschool.jp/'
 school.save!
 
 school = School.new(name: 'ヒューマンアカデミー',
           about: 'ヒューマンアカデミーの魅力は30年の伝統と述べ32万名以上の修了生を輩出している実績です。長年かけて蓄積されたデータとノウハウによって質の高い教育やサービスを提供しています。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/humanacademy-logo.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943644/%E3%83%92%E3%83%A5%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%A2%E3%82%AB%E3%83%86%E3%82%99%E3%83%9F%E3%83%BC-banner.jpg'
+school.url = 'http://haa.athuman.com/academy/web/?code=041039'
 school.save!
 
 # school = School.new(name: 'DIVE INTO CODE',
@@ -65,36 +74,42 @@ school = School.new(name: 'WEB塾',
           about: 'WEB塾はWEB制作会社の運営を通して得た、現状のWebスクールにはない現場の技術を伝えるために開設された学校です。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555547989/web%E5%A1%BElogo.jpg'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943644/%E3%82%A6%E3%82%A7%E3%83%95%E3%82%99%E5%A1%BE-banner.jpg'
+school.url = 'https://akros-ac.jp/'
 school.save!
 
 school = School.new(name: 'リナックスアカデミー',
           about: 'リナックスアカデミーは、初心者でも最短4週間でエンジニアになれるスクールとして人気です。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029094/%E3%83%AA%E3%83%8A%E3%83%83%E3%82%AF%E3%82%B9%E3%82%A2%E3%82%AB%E3%83%86%E3%82%99%E3%83%9F%E3%83%BC-logo.jpg'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029094/%E3%83%AA%E3%83%8A%E3%83%83%E3%82%AF%E3%82%B9%E3%82%A2%E3%82%AB%E3%83%86%E3%82%99%E3%83%9F%E3%83%BC-banner.jpg'
+school.url = 'https://www.linuxacademy.ne.jp/?gclid=Cj0KCQjwkoDmBRCcARIsAG3xzl8Jp0Wmttlw6DPsS80vu928tg5foDUkBGwgolAIr1PvFNhy293MLcIaAnxGEALw_wcB'
 school.save!
 
 school = School.new(name: 'ITブートキャンプ',
           about: 'ITブートキャンプは環境を一変させ、短期間で集中してプログラミングを学ぶことで、知識ゼロからITエンジニアレベルまで技術を引き上げることができるプログラミングスクールです。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029094/it%E3%83%95%E3%82%99%E3%83%BC%E3%83%88%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%95%E3%82%9A-logo.jpg'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029094/IT-Bootcamp-banner.jpg'
+school.url = 'https://i-b-c.jp/'
 school.save!
 
 school = School.new(name: 'TECH::CAMP',
           about: 'TECH::CAMP（テックキャンプ）は、平均1ヵ月でサービス開発のできるエンジニアを養成する、短期集中型のプログラミングスクールです。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029093/techcamp-logo.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029093/techcamp-banner.jpg'
+school.url = 'https://tech-camp.in/'
 school.save!
 
 school = School.new(name: 'Asialスクール',
           about: 'Asialスクールは、最短1日で実践的なWeb技術を学ぶことができるスクールです。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029093/asial-banner.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029094/asial-school-banner.png'
+school.url = 'https://www.asial.co.jp/'
 school.save!
 
 school = School.new(name: 'INTERNET ACADEMY',
           about: '日本初で日本唯一のWeb専門スクールとして1995年に始まったインターネット・アカデミーは「初心者を最短距離で最前線へ導くこと」を目指しています。')
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029093/internetacademy-logo.png'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1555029456/internetacademy1.png'
+school.url = 'https://www.internetacademy.jp/'
 school.save!
 
 puts "seeding schools done."
