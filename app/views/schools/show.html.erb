@@ -6,12 +6,10 @@
       <h2 class='show-school-name'><%= @school.name %></h2>
       <div class="show-card-category">stars</div>
         <div class="s-school-description">
-          <div>プログラム：<%= @school.courses[0].name %></div>
-          <div>価格：<% prices = @school.courses.map do |c| %>
-            <% c.price %>
-            <% end %>
-            <%= prices.join(',') %>円
-          </div>
+          <div>プログラム：<%= @school.courses[0].name %><%= @school.courses.size >= 2 ? ' 他' : nil  %></div>
+          <div>価格： <%= number_with_delimiter(@school.courses[0].price, :precision => 2, :delimiter => ',') %>円<%= @school.courses.size >= 2 ? ' 〜' : nil  %></div>
+          <%#= '他' %>
+          <%# end %>
         </div>
       </div>
   </div>
@@ -48,7 +46,7 @@
     <div id="course" style='display: none;'>
       <% @school.courses.each do |course| %>
         <p>コース名：<%= course.name %></p>
-        <p>価格：<%= course.price %></p>
+        <p>価格：<%= number_with_delimiter(course.price, :precision => 2, :delimiter => ',') %></p>
       <% end %>
     </div>
 

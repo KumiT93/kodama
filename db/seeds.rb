@@ -1,7 +1,6 @@
 school = School.new(name: 'Le Wagon',
-          about: 'Le Wagon is a 9-week Ruby on Rails focused bootcamp based out of Paris and other various locations. With a community of students with various backgrounds (engineers, journalists, architects, designers, etc.), applicants will join an exciting tech community. All the students of Le Wagon share the same technical background and apply industry best practices. This mix between diversity & technical expertise makes the community unique.
-Graduates of Le Wagon will be proficient in Ruby on Rails, JavaScript, HTML & CSS, APIs, Github, and Heroku. Le Wagon requires 40 hours of online work to prepare for the course, and in 2 months students will be able to build several web applications, including a clone of Airbnb and a personal project. The bootcamp focuses on bringing coding skill to creatives and entrepreneurs with the ambition to build their own MVP and/or challenge their future dev team.',
-          )
+          about: 'Le Wagonは、９週間でRuby on Railsを中心としたプログラミングを学ぶスクールです。本部はパリにあり、他にも全世界にクラスを展開しているグローバルなプログラミングスクールです。世界基準でプログラミングを学べ、また授業が英語で行われるので、今後英語を使用したディベロッパーや将来を検討している方にはぴったりです。')
+
 school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554448520/logo.png'
 puts 'photo uploaded!'
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554451460/ai-artificial-intelligence-codes-247791.jpg'
@@ -56,11 +55,11 @@ school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/hum
 school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943644/%E3%83%92%E3%83%A5%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%A2%E3%82%AB%E3%83%86%E3%82%99%E3%83%9F%E3%83%BC-banner.jpg'
 school.save!
 
-school = School.new(name: 'DIVE INTO CODE',
-          about: 'DIVE INTO CODE（ダイブイントゥーコード）は、Ruby on Railsを活用したWebアプリケーション開発に必要な知識を指導し、自力でプロトタイプを作成できるスキルをつけることを目標とするスクールです。')
-school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/diveintocode-logo.png'
-school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/diveintocode-banner.jpg'
-school.save!
+# school = School.new(name: 'DIVE INTO CODE',
+#           about: 'DIVE INTO CODE（ダイブイントゥーコード）は、Ruby on Railsを活用したWebアプリケーション開発に必要な知識を指導し、自力でプロトタイプを作成できるスキルをつけることを目標とするスクールです。')
+# school.logo = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/diveintocode-logo.png'
+# school.banner = 'https://res.cloudinary.com/drsb1n3km/image/upload/v1554943642/diveintocode-banner.jpg'
+# school.save!
 
 school = School.new(name: 'WEB塾',
           about: 'WEB塾はWEB制作会社の運営を通して得た、現状のWebスクールにはない現場の技術を伝えるために開設された学校です。')
@@ -100,10 +99,61 @@ school.save!
 
 puts "seeding schools done."
 
-course = Course.new(name: 'The Fullstuck Program', price: '790000', weeks: '9', school_id: 1)
+course = Course.new(name: 'フルスタックプログラム', price: '790000', weeks: '9', school_id: 1)
 course.save!
 
 course = Course.new(name: '副業・フリーランスコース 短期集中スタイル', price: '598000', weeks: '10~', school_id: 2)
+course.save!
+
+course = Course.new(name: 'Webアプリケーションコース', price: '119000', weeks: '4', school_id: 3)
+course.save!
+
+course = Course.new(name: 'UI/UXデザインコース', price: '89000', weeks: '4', school_id: 3)
+course.save!
+
+course = Course.new(name: '＜WebCamp＞WebApp Camp、Design Camp', price: '99800', weeks: '4~', school_id: 4)
+course.save!
+
+course = Course.new(name: '＜Webスク＞Webデザイナーコース、プログラマーコース', price: '400000', weeks: '12~', school_id: 4)
+course.save!
+
+course = Course.new(name: '0円スクール', price: '0', weeks: '5~', school_id: 5)
+course.save!
+
+course = Course.new(name: 'WordPressコース', price: '28000', weeks: '2', school_id: 6)
+course.save!
+
+course = Course.new(name: 'マスターコース', price: '29800', weeks: '36', school_id: 6)
+course.save!
+
+course = Course.new(name: 'ぽてパンキャンプ', price: '108000', weeks: '12', school_id: 7)
+course.save!
+
+course = Course.new(name: 'プログラミングコース', price: '42000~', weeks: '1~', school_id: 8)
+course.save!
+
+course = Course.new(name: 'Javaプログラミング講座', price: '280800', weeks: '1~', school_id: 9)
+course.save!
+
+# course = Course.new(name: '副業・フリーランスコース 短期集中スタイル', price: '598000', weeks: '10~', school_id: 10)
+# course.save!
+
+course = Course.new(name: 'プログラミングスクール', price: '270000~', weeks: '1~', school_id: 10)
+course.save!
+
+course = Course.new(name: 'Javaプログラマーコース', price: '380000', weeks: '1~', school_id: 11)
+course.save!
+
+course = Course.new(name: 'フロントエンドエンジニアコース', price: '290000', weeks: '8', school_id: 12)
+course.save!
+
+course = Course.new(name: 'Webプログラミング', price: '14800~', weeks: '10~', school_id: 13)
+course.save!
+
+course = Course.new(name: 'Web人材養成5日間パック', price: '150000', weeks: '1~', school_id: 14)
+course.save!
+
+course = Course.new(name: 'ウェブスタッフセレクト+PHPコース', price: '761658', weeks: '52', school_id: 15)
 course.save!
 
 puts 'course seeds done.'
