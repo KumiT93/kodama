@@ -12,6 +12,7 @@ class SchoolsController < ApplicationController
   end
 
   def show
+    @schools = School.all
     @school = School.find(params[:id])
     @related_schools = @school.find_related_tags
     @reviews = Review.all
