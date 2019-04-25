@@ -16,9 +16,12 @@ body {
 }
 
 .show-school-name {
-  color: #3bb4c1;
+  color: #6FCCD3;
   font-weight: bold;
   font-size: 40px;
+}
+.show-school-name:hover {
+  color: #3bb4c1;
 }
 .show-card-description {
   position: absolute;

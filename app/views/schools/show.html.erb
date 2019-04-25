@@ -2,7 +2,7 @@
   <div class="show-card-description">
     <%= image_tag(@school.logo, class: 'show-card-logo') %>
     <div class="s-school-card-description">
-      <h2 class='show-school-name'><%= @school.name %></h2>
+      <%= link_to @school.name, @school.url,target: :brank, class: 'show-school-name' %>
       <div class="show-card-category">
 
       </div>
