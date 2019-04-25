@@ -33,6 +33,7 @@
       <% if @school.reviews.exists? %>
         <% @school.reviews.each do |review| %>
         <div class='review-title-detail'>
+          <div class="s-review-user">投稿者：<%= review.user.github %></div>
           <div class='s-review-title'><%= review.title %></div>
           <div class='s-review-detail'><%= review.detail %></div>
         </div>

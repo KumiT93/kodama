@@ -67,14 +67,20 @@ body {
 .review-title-detail {
   padding: 10px;
 }
+.s-review-user {
+  font-weight: light;
+  font-size: 12px;
+  padding-bottom: 2px;
+}
 .s-review-title {
   font-family: 'M PLUS 1p', sans-serif;
-  font-family: bold 700;
+  font-weight: bold;
   font-size: 16px;
   color: black !important;
 }
 .s-review-detail {
   font-size: 14px;
+  font-weight: light;
 }
 
 
@@ -87,6 +93,7 @@ body {
 }
 #about {
   font-family: 'M PLUS 1p', sans-serif;
+  line-height: 28px;
 }
 
 
