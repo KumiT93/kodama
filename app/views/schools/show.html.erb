@@ -14,7 +14,6 @@
   </div>
 </div>
 
-
 <div class="s-show-wrapper">
   <div class="show-container">
 
@@ -34,8 +33,8 @@
       <% if @school.reviews.exists? %>
         <% @school.reviews.each do |review| %>
         <div class='review-title-detail'>
-          <div><%= review.title %></div>
-          <div><%= review.detail %></div>
+          <div class='s-review-title'><%= review.title %></div>
+          <div class='s-review-detail'><%= review.detail %></div>
         </div>
         <% end %>
       <% else %>
@@ -43,7 +42,6 @@
       <p><%= link_to '最初のレビューを書く', new_review_path, class: 'btn btn-primary s-write-review' %></p>
       <% end %>
     </div>
-
 
     <div id="course" style='display: none;'>
       <% @school.courses.each do |course| %>

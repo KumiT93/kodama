@@ -182,11 +182,11 @@ puts 'course seeds done.'
 user = User.new(email: 'kini@example.com', encrypted_password: 'kini', github: 'gogo', job_description: 'sales')
 user.save!
 
-review = Review.new(title: 'Good', detail: 'very good school', overall_rating: 5, curriculum_rating: 5, job_support_rating: 4,
+review = Review.new(title: 'とても良い', detail: 'わかりやすかった', overall_rating: 5, curriculum_rating: 5, job_support_rating: 4,
   user_id: 1, school_id: 1, course_id: 1)
 review.save!
 
-review = Review.new(title: 'Awesome', detail: 'really good school', overall_rating: 4, curriculum_rating: 4, job_support_rating: 5,
+review = Review.new(title: 'まあまあ', detail: '授業は難しかった', overall_rating: 4, curriculum_rating: 4, job_support_rating: 5,
   user_id: 1, school_id: 1, course_id: 1)
 review.save!
 

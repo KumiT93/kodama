@@ -67,9 +67,20 @@ body {
 .review-title-detail {
   padding: 10px;
 }
+.s-review-title {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-family: bold 700;
+  font-size: 16px;
+  color: black !important;
+}
+.s-review-detail {
+  font-size: 14px;
+}
+
 
 #review {
   font-family: 'M PLUS 1p', sans-serif;
+  // color: #4e4e4e;
 }
 #course {
   font-family: 'M PLUS 1p', sans-serif;
