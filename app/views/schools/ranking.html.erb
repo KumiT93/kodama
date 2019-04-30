@@ -14,17 +14,22 @@
 
   <div class="row">
 
+    <% counter = 1 %>
     <% @schools.first(10).each do |school| %>
       <div class="col-xs-1 col-md-12">
         <div class="school-index">
           <div class="r-school-card">
             <%= link_to school_path(school) do %>
-            <p><%= image_tag(school.logo, class: 'school-logo') %></p>
-            <div class="school-description">
-              <p class='school-name'><%= school.name %></p>
-              <p class='school-detail'>location</p>
-              <p class='school-detail'>stars</p>
+            <div class="ranking-card">
+              <div class="icon"><i class="fas fa-crown"></i> <%= counter %></div>
+              <div><%= image_tag(school.logo, class: 'ranking-school-logo') %></div>
+              <div class="r-school-description">
+                <p class='r-school-name'>スクール名：<%= school.name %></p>
+                <p class='r-school-detail'>location</p>
+                <p class='r-school-detail'>stars</p>
+              </div>
             </div>
+              <% counter += 1 %>
             <% end %>
           </div>
         </div>
