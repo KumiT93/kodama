@@ -1,3 +1,4 @@
+
 /*!
  * jQuery Raty - A Star Rating Plugin
  *
@@ -8,8 +9,6 @@
  * version: 2.9.0
  *
  */
- require jQuery;
- require jQuery_ujs;
 
 (function($) {
   'use strict';
