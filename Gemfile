@@ -12,6 +12,7 @@ gem 'pg_search'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'rating'
+gem 'ratyrate'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

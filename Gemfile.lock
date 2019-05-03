@@ -165,6 +165,7 @@ GEM
     rake (12.3.2)
     rating (0.8.0)
       activerecord (>= 4.2, < 6)
+    ratyrate (1.2.2.alpha)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -247,6 +248,7 @@ DEPENDENCIES
   puma
   rails (= 5.2.2.1)
   rating
+  ratyrate
   redis
   sassc-rails
   simple_form
