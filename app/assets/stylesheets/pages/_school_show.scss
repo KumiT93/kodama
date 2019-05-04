@@ -27,7 +27,7 @@ body {
   position: absolute;
   display: flex;
   align-items: center;
-  padding: 30px;
+  padding: 40px;
   padding-left: 100px;
 }
 .s-school-card-description {
@@ -85,6 +85,9 @@ body {
   font-size: 14px;
   font-weight: light;
 }
+.show-rating {
+  padding-top: 10px;
+}
 .show-star {
   color: white;
 }
@@ -94,11 +97,12 @@ body {
 }
 .curriculum_rating {
   font-size: 12.5px;
-  opacity: 0.8;
+  line-height: 20px;
+  // opacity: 0.8;
 }
 .job_support_rating {
   font-size: 12.5px;
-  opacity: 0.8;
+  // opacity: 0.8;
 }
 
 
