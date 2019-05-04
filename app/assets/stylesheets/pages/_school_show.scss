@@ -2,7 +2,7 @@ body {
   background-color: white;
 }
 .show-banner {
-  height: 30vh;
+  height: 37vh;
   width: auto;
   text-shadow: 0 1px 3px rgba(0,0,0,0.45);
   background-size: cover !important;
@@ -27,7 +27,7 @@ body {
   position: absolute;
   display: flex;
   align-items: center;
-  padding: 50px;
+  padding: 30px;
   padding-left: 100px;
 }
 .s-school-card-description {
@@ -84,6 +84,21 @@ body {
 .s-review-detail {
   font-size: 14px;
   font-weight: light;
+}
+.show-star {
+  color: white;
+}
+.show-unstar {
+  color: white;
+  opacity: 0.8;
+}
+.curriculum_rating {
+  font-size: 12.5px;
+  opacity: 0.8;
+}
+.job_support_rating {
+  font-size: 12.5px;
+  opacity: 0.8;
 }
 
 

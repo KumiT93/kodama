@@ -15,21 +15,39 @@
   </div>
 
   <div class="home-cards">
-    <h3>カテゴリ別スクール</h3>
+    <h3>おすすめスクール</h3>
+    <!-- Please change it to below when you add tag_line to all schools -->
+    <!-- <h3>カテゴリ別スクール</h3> -->
 
     <div class="categories-container">
       <div class="row">
         <div class="col-xs-12 col-md-3">
-          <div class='text-center'><%=  'UI/UX デザイン' %></div>
+          <div class='text-center'>
+            <!-- Please uncomment out when you add tag_line to all schools (this is for UI/UX desing) -->
+            <%#=  'UI/UX デザイン' %>
+            <%#= @schools.find("tagline = ?", 'UI/UX デザイン') %>
+          </div>
         </div>
         <div class="col-xs-12 col-md-3">
-          <div class='text-center'><%=  'フルスタック型ブートキャンプ' %></div>
+          <div class='text-center'>
+            <!-- Please uncomment out when you add tag_line to all schools (this is for full-stack bootcamp)-->
+            <%#=  'フルスタック型ブートキャンプ' %>
+            <%#= @schools.find("tagline = ?", 'フルスタック型ブートキャンプ') %>
+          </div>
         </div>
         <div class="col-xs-12 col-md-3">
-          <div class='text-center'><%=  'データサイエンス' %></div>
+          <div class='text-center'>
+            <!-- Please uncomment out when you add tag_line to all schools (this is for data science) -->
+            <%#=  'データサイエンス' %>
+            <%#= @schools.find("tagline = ?", 'データサイエンス') %>
+          </div>
         </div>
         <div class="col-xs-12 col-md-3">
-          <div class='text-center'><%=  'ブロックチェーン' %></div>
+          <div class='text-center'>
+            <!-- Please uncomment out when you add tag_line to all schools (this is for block chain) -->
+            <%#=  'ブロックチェーン' %>
+            <%#= @schools.find("tagline = ?", 'ブロックチェーン') %>
+          </div>
         </div>
       </div>
     </div>
@@ -43,14 +61,27 @@
           <div class="school-index">
             <div class="i-school-card">
               <%= link_to school_path(school) do %>
-              <div class="school-logo-card">
-                <%= image_tag(school.logo, class: 'school-logo') %>
-              </div>
-              <div class="school-description">
-                <p class='h-school-name'><%= school.name %></p>
-                <p class='h-school-detail'>location</p>
-                <p class='h-school-detail'>stars</p>
-              </div>
+                <div class="school-logo-card">
+                  <%= image_tag(school.logo, class: 'school-logo') %>
+                </div>
+                <div class="school-description">
+                  <p class='h-school-name'><%= school.name %></p>
+                  <p class='h-school-detail'>location</p>
+                  <p class='h-school-detail'>
+                  <% unless school.reviews.count == 0 %>
+                    <% stars = school.reviews.map { |mr| mr.overall_rating } %>
+                    <% num = stars.inject{ |sum, el| sum + el }.to_f %>
+                    <% ave_stars = (num / stars.size).round if num > 0 %>
+                  <% end %>
+                  <% 5.times.each do |count| %>
+                    <% if ave_stars && ave_stars > count %>
+                      <i class="fas fa-star star"></i>
+                    <% else %>
+                      <i class="far fa-star unstar"></i>
+                    <% end %>
+                  <% end %>
+                  </p>
+                </div>
               <% end %>
             </div>
           </div>
