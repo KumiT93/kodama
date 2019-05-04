@@ -12,86 +12,35 @@
 
     <div class="rating">
       <h3 id=rating>Rating</h3>
-      <div class="r-last-review" id='last_review'>
-          <%# if @reviews.exists? %>
-            <div class="last-review">
-              <%# 5.times.each do |count| %>
-                <%# if @reviews.last.overall_rating && @reviews.last.overall_rating > count %>
-                  <!-- <i class="fas fa-star star"></i> -->
-                <%# else %>
-                  <!-- <i class="fas fa-star unstar"></i> -->
-                <%# end %>
-              <%# end %>
-              <!-- <p><%#= @reviews.last.detail %></p> -->
-              <!-- <p class='review-from'>Comments from <%#= @musicians.find(@reviews.last.from_id).nickname.capitalize %></p> -->
-            <%# else %>
-              <%#= 'No comments yet.' %>
-            </div>
-          <%# end %>
-        </div>
-        <div class="musician-review">
-          <div class="review-content">
-            <%# if @reviews.exists? %>
-              <%# @reviews.each do |r| %>
-                <div class="r-content">
-                  <%# 5.times.each do |count| %>
-                    <%# if r.overall_rating && r.overall_rating > count %>
-                      <!-- <i class="fas fa-star star"></i> -->
-                    <%# else %>
-                      <!-- <i class="fas fa-star unstar"></i> -->
-                    <%# end %>
-                  <%# end %>
-                  <!-- <p><%#= r.detail %></p> -->
-                  <!-- <p class='review-from'>Comments from <%#= current_user.github %></p> -->
-                </div>
-              <%# end %>
-              <%# if @user != current_user %>
-                <!-- <input type="checkbox" style="display: none;" id="m-write-review">
-                <label for="m-write-review" class='btn btn-primary write-btn'>Write comments</label>
-                <div class='back-btn'><%#= link_to 'Back', schools_path(@school) %></div> -->
-              <%# end %>
-              <div id="create-review" >
-                <%= simple_form_for [@school, @review] do |f| %>
-                  <%= f.input :overall_rating %>
-                  <%= f.input :curriculum_rating %>
-                  <%= f.input :job_support_rating %>
-                  <%#= f.input :badges, as: :select, collection: [ 'Awesome guitarist!', 'Great musician', 'Funky'] %>
-                  <%#= f.submit "Send", class: "btn btn-success review-submit" %>
-                  <%#= flash.now[:notice] = "Review has been saved successfully." %>
-                  <!-- <p class='write-btn'><%#= link_to 'Back', schools_path(@school) %></p> -->
-                <% end %>
-              </div>
-            <%# else %>
-              <!-- <p class='no-comment'><%#= 'No comments yet.' %></p> -->
-              <input type="checkbox" style="display: none;" id="m-write-review">
-              <label for="m-write-review" class='btn btn-primary write-btn'>Write the first comment!</label>
-              <p class='back-btn'><%= link_to 'Back', schools_path(@school) %></p>
-              <script>
-                document.querySelector("#m-write-review").addEventListener("click", function() {
-                  console.log("clicked");
-                  document.querySelector('#create-review').style.display = "block";
-                  document.querySelector('.write-btn').style.display = "none";
-                  document.querySelector('#m-invite').style.display = "none";
-                  document.querySelector('.no-comment').style.display = "none";
-                  document.querySelector('.back-btn').style.display = "none";
-                })
-              </script>
-              <div id="create-review" style="display: none">
-                <%= simple_form_for [@school, @review] do |f| %>
-                  <%= f.input :title %>
-                  <%= f.input :detail  %>
-                  <%#= f.input :badges, as: :select, collection: [ 'Awesome guitarist!', 'Great musician', 'Funky'] %>
-                  <%= f.submit "Send", class: "btn btn-success review-submit" %>
-                  <%#= flash.now[:notice] = "Review has been saved successfully." %>
-                <!-- <p><%#= link_to 'Back', schools_path(@school) %></p> -->
-                <% end %>
-              </div>
-            <%# end %>
 
-        </div>
-      <%# raise %>
-      <%#= rating_for @school, 'overall' %>
-    </div>
+      <div id="create-review" >
+        <%= simple_form_for [@school, @review] do |f| %>
+          <%= f.input :overall_rating %>
+          <%= f.input :curriculum_rating %>
+          <%= f.input :job_support_rating %>
+        <% end %>
+      </div>
+
+      <input type="checkbox" style="display: none;" id="m-write-review">
+      <label for="m-write-review" class='btn btn-primary write-btn'>Write the first comment!</label>
+      <p class='back-btn'><%= link_to 'Back', schools_path(@school) %></p>
+      <script>
+        document.querySelector("#m-write-review").addEventListener("click", function() {
+          console.log("clicked");
+          document.querySelector('#create-review').style.display = "block";
+          document.querySelector('.write-btn').style.display = "none";
+          document.querySelector('#m-invite').style.display = "none";
+          document.querySelector('.no-comment').style.display = "none";
+          document.querySelector('.back-btn').style.display = "none";
+        })
+      </script>
+      <div id="create-review" style="display: none">
+        <%= simple_form_for [@school, @review] do |f| %>
+          <%= f.input :title %>
+          <%= f.input :detail  %>
+          <%= f.submit "Send", class: "btn btn-success review-submit" %>
+        <% end %>
+      </div>
 
     <div class="review-detail">
       <%= simple_form_for @review do |f| %>

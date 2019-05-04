@@ -9,8 +9,61 @@
       <div class="s-school-description">
         <div>プログラム：<%= @school.courses[0].name %><%= @school.courses.size >= 2 ? ' 他' : nil  %></div>
         <div>価格： <%= number_with_delimiter(@school.courses[0].price, :precision => 2, :delimiter => ',') %>円<%= @school.courses.size >= 2 ? ' 〜' : nil  %></div>
+        <div class="rating">
+          <div>
+            <%= "総合評価      ："%><% unless @school.reviews.count == 0 %>
+              <% stars = @school.reviews.map { |mr| mr.overall_rating } %>
+              <% num = stars.inject{ |sum, el| sum + el }.to_f %>
+              <% ave_stars = (num / stars.size).round if num > 0 %>
+            <% end %>
+            <% 5.times.each do |count| %>
+              <% if ave_stars && ave_stars > count %>
+                <i class="fas fa-star show-star"></i>
+              <% else %>
+              <i class="far fa-star show-unstar"></i>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="curriculum_rating">
+            カリキュラム評価：<% unless @school.reviews.count == 0 %>
+              <% stars = @school.reviews.map { |mr| mr.curriculum_rating } %>
+              <% num = stars.inject{ |sum, el| sum + el }.to_f %>
+              <% ave_stars = (num / stars.size).round if num > 0 %>
+            <% end %>
+            <% 5.times.each do |count| %>
+              <% if ave_stars && ave_stars > count %>
+                <i class="fas fa-star show-star"></i>
+              <% else %>
+                <i class="far fa-star show-unstar"></i>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="job_support_rating">
+            就職サポート評価：<% unless @school.reviews.count == 0 %>
+              <% stars = @school.reviews.map { |mr| mr.job_support_rating } %>
+              <% num = stars.inject{ |sum, el| sum + el }.to_f %>
+              <% ave_stars = (num / stars.size).round if num > 0 %>
+            <% end %>
+            <% 5.times.each do |count| %>
+              <% if ave_stars && ave_stars > count %>
+                <i class="fas fa-star show-star"></i>
+              <% else %>
+                <i class="far fa-star show-unstar"></i>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <div class="tagline">
+          <%# raise %>
+          <% unless @school.tag_list.nil? %>
+            <% tag = @school.tag_list.map do |t| %>
+              <% t %>
+            <% end %>
+            <%= tag.join(',') %>
+          <% end %>
+        </div>
       </div>
-      </div>
+    </div>
   </div>
 </div>
 

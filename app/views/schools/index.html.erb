@@ -23,7 +23,20 @@
             <div class="school-description">
               <p class='school-name'><%= school.name %></p>
               <p class='school-detail'>location</p>
-              <p class='school-detail'>stars</p>
+              <p class='school-detail'>
+                <% unless school.reviews.count == 0 %>
+                  <% stars = school.reviews.map { |mr| mr.overall_rating } %>
+                  <% num = stars.inject{ |sum, el| sum + el }.to_f %>
+                  <% ave_stars = (num / stars.size).round if num > 0 %>
+                <% end %>
+                <% 5.times.each do |count| %>
+                  <% if ave_stars && ave_stars > count %>
+                    <i class="fas fa-star star"></i>
+                  <% else %>
+                    <i class="fas fa-star unstar"></i>
+                  <% end %>
+                <% end %>
+              </p>
             </div>
             <% end %>
           </div>
