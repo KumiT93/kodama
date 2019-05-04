@@ -9,7 +9,7 @@
       <div class="s-school-description">
         <div>プログラム：<%= @school.courses[0].name %><%= @school.courses.size >= 2 ? ' 他' : nil  %></div>
         <div>価格： <%= number_with_delimiter(@school.courses[0].price, :precision => 2, :delimiter => ',') %>円<%= @school.courses.size >= 2 ? ' 〜' : nil  %></div>
-        <div class="rating">
+        <div class="show-rating">
           <div>
             <%= "総合評価      ："%><% unless @school.reviews.count == 0 %>
               <% stars = @school.reviews.map { |mr| mr.overall_rating } %>
