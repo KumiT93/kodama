@@ -2,20 +2,28 @@
 
   <div class="school-search">
     <h2>School Ranking</h2>
-    <div class="flex-grow-3 d-flex musician-search-bar" >
-      <%#= form_tag schools_path, method: :get, class: 'search-form' do %>
-        <%#= text_field_tag :query, params[:query], class: "form-home mr-sm-6 search-field", placeholder: "Price, Duration, Rating" %>
-        <%#= button_tag(type: "submit", class: "btn search-btn") do %>
-           <!-- <i class="fas fa-search awesome-search-color fa-lg"></i> -->
-        <%# end %>
-      <%# end %>
-    </div>
   </div>
 
   <div class="row">
 
     <% counter = 1 %>
-    <% @schools.first(10).each do |school| %>
+    <% @schools.each do |school| %>
+      <% unless school.reviews == 0 %>
+      <% stars = school.reviews.map { |mr| mr.overall_rating} %>
+      <% num = stars.inject{ |sum, el| sum + el }.to_f %>
+      <% ave_stars = (num / stars.size).round if num > 0 %>
+      <% end %>
+      <%#= new_schools %>
+    <% end %>
+    <%# rating_for @school, 'overall' %>
+
+
+    <% @schools.each_with_index do |school, i| %>
+      <% unless school.reviews.count == 0 %>
+        <% stars = school.reviews.map { |mr| mr.overall_rating } %>
+        <% num = stars.inject{ |sum, el| sum + el }.to_f %>
+        <% ave_stars = (num / stars.size).round if num > 0 %>
+      <% end %>
       <div class="col-xs-1 col-md-12">
         <div class="school-index">
           <div class="r-school-card">
@@ -26,14 +34,24 @@
               <div class="r-school-description">
                 <p class='r-school-name'>スクール名：<%= school.name %></p>
                 <p class='r-school-detail'>location</p>
-                <p class='r-school-detail'>stars</p>
+                <p class='r-school-detail'>
+                  <%= "総合評価      ："%>
+                  <% 5.times.each do |count| %>
+                    <% if ave_stars && ave_stars > count %>
+                      <i class="fas fa-star ranking-star"></i>
+                    <% else %>
+                    <i class="far fa-star ranking-unstar"></i>
+                    <% end %>
+                  <% end %>
+                  </p>
               </div>
             </div>
-              <% counter += 1 %>
+            <% counter += 1 %>
             <% end %>
           </div>
         </div>
       </div>
+      <% break if i == 9 %>
     <% end %>
 
   </div>
